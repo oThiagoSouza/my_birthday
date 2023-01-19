@@ -1,0 +1,21 @@
+@use '../variables';
+
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: variables.$yellow;
+    padding: 12px;
+    border-radius: 5px;
+    color: variables.$secondaryTextColor;
+
+    &:hover {
+        background-color: lighten(variables.$yellow, 5%);
+    }
+
+    @media (max-width:640px) {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}

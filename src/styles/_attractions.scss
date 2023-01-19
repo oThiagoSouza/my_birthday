@@ -1,0 +1,52 @@
+@use 'variables';
+
+.attractions {
+    padding: 80px 0;
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &--music {
+        background-image: linear-gradient(variables.$red, variables.$orange1);
+    }
+
+    &--food {
+        background-image: linear-gradient(variables.$orange1, variables.$orange2);
+    }
+
+    &--fotos {
+        background-image: linear-gradient(variables.$orange2, variables.$yellow);
+    }
+
+
+    &__content {
+        &__title {
+            margin-bottom: 16px;
+        }
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    @media (max-width:640px) {
+        .container {
+            display: block;
+        }
+
+        &__content {
+            margin-bottom: 16px;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+}
